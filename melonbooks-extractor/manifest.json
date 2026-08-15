@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Melonbooks Product Extractor",
+  "version": "1.3.0",
+  "description": "Extracts title, price, circle name and circle URL from Melonbooks product pages.",
+  "content_scripts": [
+    {
+      "matches": ["https://www.melonbooks.co.jp/detail/detail.php*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

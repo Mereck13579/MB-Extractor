@@ -1,0 +1,120 @@
+#melonbooks-extractor-panel {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2147483647;
+  width: 360px;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: #222222;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  font: 14px/1.4 Arial, sans-serif;
+}
+
+#melonbooks-extractor-panel * {
+  box-sizing: border-box;
+}
+
+#melonbooks-extractor-panel .mbe-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background: #f2f2f2;
+  border-bottom: 1px solid #ddd;
+  border-radius: 8px 8px 0 0;
+}
+
+#melonbooks-extractor-panel .mbe-header button {
+  border: 0;
+  background: transparent;
+  font-size: 20px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+#melonbooks-extractor-panel .mbe-body {
+  padding: 10px;
+}
+
+#melonbooks-extractor-panel .mbe-row {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+#melonbooks-extractor-panel .mbe-label {
+  font-weight: bold;
+  color: #666;
+}
+
+#melonbooks-extractor-panel .mbe-value {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+#melonbooks-extractor-panel a.mbe-value {
+  color: #06c;
+  text-decoration: underline;
+}
+
+#melonbooks-extractor-panel .mbe-buttons {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+#melonbooks-extractor-panel .mbe-buttons button {
+  padding: 5px 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+#melonbooks-extractor-panel .mbe-buttons button:hover {
+  background: #e9e9e9;
+}
+
+#melonbooks-extractor-panel .mbe-status {
+  height: 18px;
+  margin-top: 5px;
+  color: #16833b;
+  font-size: 12px;
+}
+
+/* Reduced state: a tiny floating button, so it doesn't cover Melonbooks' UI. */
+#melonbooks-extractor-panel.mbe-minimized {
+  width: 34px;
+  height: 34px;
+  top: 120px;
+  right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#melonbooks-extractor-panel.mbe-minimized .mbe-header,
+#melonbooks-extractor-panel.mbe-minimized .mbe-body {
+  display: none;
+}
+
+#melonbooks-extractor-panel #mbe-restore {
+  display: none;
+}
+
+#melonbooks-extractor-panel.mbe-minimized #mbe-restore {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
